@@ -18,7 +18,7 @@ export default function Hero() {
   return (
     <div>
       <div className="flex flex-col justify-center items-center h-screen text-center bg-[#ffe5d4] px-4">
-        <h1 className="text-3xl font-medium mb-10 drop-shadow-md">
+        <h1 className="text-2xl font-medium mb-8 drop-shadow-md">
           EventyCms
         </h1>
 
@@ -28,7 +28,7 @@ export default function Hero() {
             placeholder="Cari idEvent..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full p-3 pl-10 pr-4 rounded-full shadow-lg border border-[#440806] focus:border-blue-500 focus:ring-2 focus:ring-[#ff6b35] outline-none transition duration-200 placeholder-[#fe4711]] text-gray-800"
+            className="w-full py-4 px-2 pl-10 pr-4 rounded-full shadow-lg border border-[#440806] focus:border-blue-500 focus:ring-2 focus:ring-[#ff6b35] outline-none transition duration-200 placeholder-[#fe4711]] text-gray-800"
           />
           <span className="absolute left-3 top-1/2 -translate-y-1/2">
             🔍
