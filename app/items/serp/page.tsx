@@ -61,14 +61,14 @@ export default function SerpPage() {
       <h1 className="text-2xl font-medium mb-8">Daftar Event</h1>
 
       {/* Search Bar */}
-      <div className="relative w-full max-w-md mb-8 px-2">
+      <div className="relative w-full max-w-md mb-8 px-6">
          <input
             type="text"
             placeholder="Cari idEvent..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="w-full py-4 px-2 pl-10 pr-4 rounded-full shadow-lg border border-[#440806] focus:border-blue-500 focus:ring-2 focus:ring-[#ff6b35] outline-none transition duration-200 placeholder-[#fe4711]] text-gray-800"
-          />         <FaSearch className="absolute left-0 right-4 top-1/2 -translate-y-1/2 text-gray-400" />
+          />         <FaSearch className="absolute left-10 top-1/2 -translate-y-1/2 text-gray-400" />
       </div>
 
       {/* Messages */}
