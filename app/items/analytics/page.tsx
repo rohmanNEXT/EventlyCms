@@ -45,11 +45,11 @@ const ChartUnique: React.FC = () => {
   const [data, setData] = useState<Visitor[]>([]);
   const [range, setRange] = useState("24h");
 
- useEffect(() => {
+useEffect(() => {
   const getData = async () => {
-    const { data } = await axios.get(
-      `https://evently-cms.vercel.app/api/analytics?range=${range}`
-    );
+    const { data } = await axios.get(`/api/analytics`, {
+      params: { range }
+    });
     setData(data);
   };
 
