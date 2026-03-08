@@ -12,13 +12,13 @@ export default function Navbar() {
 
     return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#440806]/20 backdrop-blur-md border-b border-[#e1f1fd]/10">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-10 md:px-16 lg:px-20 py-5">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 sm:px-10 md:px-16 lg:px-20 py-5">
         {/* Logo */}
         <div
           onClick={()=>{router.push("/items/home")}}
-          className="text-2xl sm:text-3xl font-light cursor-pointer tracking-tight px-0"
+          className="text-2xl sm:text-3xl font-light cursor-pointer tracking-tight px-0 font-serif text-orange-900/90"
         >
-          EventyCms.net
+          Eventy.net
         </div>
 
         {/* Menu Desktop */}
@@ -27,7 +27,7 @@ export default function Navbar() {
             Home
           </button>
           <button onClick={()=>{router.push("/items/serp")}} className="hover:text-[#9d190f] transition cursor-pointer">
-            SERP
+            Pencarian
           </button>
                       <button onClick={()=>{router.push("/items/analytics")}} className="hover:text-[#9d190f] transition cursor-pointer">
         Analytics

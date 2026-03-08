@@ -78,7 +78,7 @@ export default function GetAll() {
 
                 <button
                   onClick={() => router.push(`/items/serp/${event.id}`)}
-                  className="mt-4 inline-flex items-center justify-center gap-2 text-white bg-blue-500 hover:bg-blue-600 rounded-full px-4 py-2 text-sm font-medium transition"
+                  className="mt-4 inline-flex items-center justify-center gap-2 text-white bg-orange-900 hover:bg-orange-700 rounded-full px-4 py-2 text-sm font-medium transition"
                 >
                   Lihat Detail <FaArrowRight size={14} />
                 </button>
@@ -111,7 +111,7 @@ export default function GetAll() {
                 onClick={() => goToPage(i + 1)}
                 className={`px-3 py-1 border rounded ${
                   currentPage === i + 1
-                    ? "bg-blue-600 text-white"
+                    ? "bg-orange-700 text-white"
                     : "hover:bg-gray-100"
                 }`}
               >

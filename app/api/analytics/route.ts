@@ -2,8 +2,8 @@ import axios from "axios"
 
 export async function GET() {
   try {
-  const startAt = new Date("2026-03-01").getTime()
   const endAt = Date.now()
+  const startAt = endAt - 24 * 60 * 60 * 1000;
 
   const { data } = await axios.get(
     `https://cloud.umami.is/api/websites/${process.env.UMAMI_WEBSITE_ID}/pageviews?unit=day&startAt=${startAt}&endAt=${endAt}`,
