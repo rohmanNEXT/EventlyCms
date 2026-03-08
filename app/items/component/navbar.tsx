@@ -70,7 +70,13 @@ export default function Navbar() {
            onClick={()=>{router.push("/items/serp")}} 
             className="w-full text-center py-2 hover:bg-[#1a4566]/40 transition"
           >
-            SERP
+            Pencarian
+          </button>
+          <button
+           onClick={()=>{router.push("/items/analytics")}} 
+            className="w-full text-center py-2 hover:bg-[#1a4566]/40 transition"
+          >
+            Analytics
           </button>
           <button
            onClick={()=>{router.push("/items/contact")}} 
