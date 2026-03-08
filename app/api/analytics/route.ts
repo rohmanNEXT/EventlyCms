@@ -5,6 +5,8 @@ export async function GET() {
   const endAt = Date.now()
   const startAt = endAt - 24 * 60 * 60 * 1000;
 
+  console.log(process.env.UMAMI_TOKEN);
+  console.log(process.env.UMAMI_WEBSITE_ID);
   const { data } = await axios.get(
     `https://cloud.umami.is/api/websites/${process.env.UMAMI_WEBSITE_ID}/pageviews?unit=day&startAt=${startAt}&endAt=${endAt}`,
     {
@@ -13,7 +15,6 @@ export async function GET() {
       }
     }
   )
-
     const pageviews = data?.pageviews ?? data ?? []
 
     const formatted = pageviews.map(({ x, y }: { x: string; y: number }) => ({
