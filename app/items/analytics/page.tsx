@@ -45,13 +45,16 @@ const ChartUnique: React.FC = () => {
   const [data, setData] = useState<Visitor[]>([]);
   const [range, setRange] = useState("24h");
 
-  useEffect(() => {
-    const getData = async () => {
-      const res = await axios.get(`/api/analytics?range=${range}`);
-      setData(res.data);
-    };
-    getData();
-  }, [range]);
+ useEffect(() => {
+  const getData = async () => {
+    const { data } = await axios.get(
+      `https://evently-cms.vercel.app/api/analytics?range=${range}`
+    );
+    setData(data);
+  };
+
+  getData();
+}, [range]);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 py-16">
