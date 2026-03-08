@@ -33,24 +33,38 @@ export default async function DetailPage({ params }: DetailPageProps) {
   }
 
   return (
-    <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-      <article className="w-full max-w-4xl">
-        
-        <header className="text-center mb-10">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3"> 
-            {data.title || "Tanpa Nama"}
-          </h1>
+<section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+  <article className="w-full max-w-xl text-center">
 
-          <p className="text-gray-600 text-sm sm:text-base">
-            {data.country || "-"}
-          </p>
-        </header>
+    <header className="mb-10">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
+        {data.title || "Tanpa Nama"}
+      </h1>
 
-        <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none text-gray-800 leading-relaxed">
-          <Markdown>{data.description}</Markdown>
-        </div>
+      <p className="text-gray-600 text-sm sm:text-base my-1">
+        {data.country || "-"}
+      </p>
+    </header>
 
-      </article>
-    </section>
-  );
+ <div
+  className="
+  prose prose-sm sm:prose-base lg:prose-lg
+  max-w-3xl mx-auto text-center
+
+  [&>ul]:list-none
+  [&>ul]:pl-0
+  [&>ul]:ml-0
+  [&>ul]:text-center
+
+  [&>li]:text-center
+
+  [&>p]:my-5
+  [&>ul]:my-4
+">
+  <Markdown>{data.description}</Markdown>
+</div>
+
+  </article>
+</section>
+);
 }
