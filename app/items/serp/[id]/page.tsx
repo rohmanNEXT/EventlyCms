@@ -17,34 +17,40 @@ export default async function DetailPage({ params }: DetailPageProps) {
     data = null; // jika gagal fetch
   }
 
-  if (!data) {
+ if (!data) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen text-center px-6">
-        <h1 className="text-3xl font-bold mb-4">Event tidak ditemukan</h1>
-        <p className="text-gray-600">
-          ID event mungkin salah atau data tidak tersedia.
-        </p>
+      <div className="flex min-h-screen items-center justify-center px-6 text-center">
+        <div>
+          <h1 className="text-2xl sm:text-3xl font-semibold mb-3">
+            Event tidak ditemukan
+          </h1>
+          <p className="text-gray-600 text-sm sm:text-base">
+            ID event salah atau data tidak tersedia
+          </p>
+        </div>
       </div>
     );
   }
 
-  // JSX untuk data valid
   return (
-    <div className="w-full flex items-center justify-center px-4 sm:px-6 md:px-12 lg:px-24 py-16">
-<div className="flex flex-col items-center justify-center text-center 
-px-4 sm:px-6 md:px-12 lg:px-40 w-full max-w-5xl h-screen">
+    <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
+      <article className="w-full max-w-4xl">
+        
+        <header className="text-center mb-10">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
+            {data.title || "Tanpa Nama"}
+          </h1>
 
-  
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium mb-4">
-          {data.title || "Tanpa Nama"}
-        </h1>
+          <p className="text-gray-600 text-sm sm:text-base">
+            {data.country || "-"}
+          </p>
+        </header>
 
-        <p className="text-gray-700 text-sm sm:text-base mb-10">
-          {data.country || "-"}
-        </p>
-
-        <div className="prose prose-sm sm:prose-base lg:prose-lg text-gray-800 leading-relaxed text-justify max-w-none">
+        <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none text-gray-800 leading-relaxed">
           <Markdown>{data.description}</Markdown>
-        </div>         </div> </div>
+        </div>
+
+      </article>
+    </section>
   );
 }
