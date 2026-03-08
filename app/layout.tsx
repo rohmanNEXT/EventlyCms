@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "./items/component/navbar";
 import Footer from "./items/component/footer";
 import { Suspense } from "react";
+import Analytic from "./items/analytics/analytics";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,19 +28,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Suspense fallback={<div>Loading...</div>}>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen bg-[#ffe5d4] text-[#440806]`}
-        >
-          <div className="p-8">
-            {" "}
-            <Navbar />{" "}
-          </div>
-          {children}
-
-          <Footer />
-        </body>{" "}
-      </Suspense>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen bg-[#ffe5d4] text-[#440806]`}
+      >
+        <div className="p-8">
+          <Navbar />{" "}
+        </div>
+        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        <Footer />
+        <Analytic />
+      </body>
     </html>
   );
 }

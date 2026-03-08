@@ -23,13 +23,16 @@ export default function Navbar() {
 
         {/* Menu Desktop */}
         <div className="hidden md:flex items-center gap-10 text-lg font-light">
-          <button onClick={()=>{router.push("/items/home")}} className="hover:text-[#9d190f] transition">
+          <button onClick={()=>{router.push("/items/home")}} className="hover:text-[#9d190f] transition cursor-pointer">
             Home
           </button>
-          <button onClick={()=>{router.push("/items/serp")}} className="hover:text-[#9d190f] transition">
+          <button onClick={()=>{router.push("/items/serp")}} className="hover:text-[#9d190f] transition cursor-pointer">
             SERP
           </button>
-            <button onClick={()=>{router.push("/items/contact")}} className="hover:text-[#9d190f] transition">
+                      <button onClick={()=>{router.push("/items/analytics")}} className="hover:text-[#9d190f] transition cursor-pointer">
+        Analytics
+          </button>
+            <button onClick={()=>{router.push("/items/contact")}} className="hover:text-[#9d190f] transition cursor-pointer">
         Contact us
           </button>
         </div>
