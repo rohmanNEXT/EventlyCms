@@ -33,11 +33,11 @@ export default async function DetailPage({ params }: DetailPageProps) {
   }
 
   return (
-    <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
+    <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
       <article className="w-full max-w-4xl">
         
         <header className="text-center mb-10">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3"> 
             {data.title || "Tanpa Nama"}
           </h1>
 
