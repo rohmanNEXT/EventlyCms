@@ -87,7 +87,7 @@ export default function Navbar() {
           <CButton
           
             variant="outline"
-            className="border border-[#440806] rounded-full px-4 py-2 mt-1 hover:bg-[#ffa071] hover:text-[#0a2e47] transition"
+            className="border border-[#440806] rounded-full px-4 py-2 mt-1 hover:bg-[#ffa071] hover:text-[#0a2e47] transition cursor-pointer"
           >
             Google Map →
           </CButton>
