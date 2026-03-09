@@ -110,7 +110,7 @@ export default function SerpPage() {
           <button
             disabled={currentPage === 1}
             onClick={() => setCurrentPage((p) => p - 1)}
-            className="px-3 py-1 border rounded disabled:opacity-50 hover:bg-orange-700 transition"
+            className="px-3 py-1 border rounded disabled:opacity-50 hover:bg-orange-700 transition cursor-pointer"
           >
             Prev
           </button>
@@ -121,8 +121,8 @@ export default function SerpPage() {
               onClick={() => setCurrentPage(i + 1)}
               className={`px-3 py-1 border rounded transition ${
                 currentPage === i + 1
-                  ? "bg-orange-700 text-white"
-                  : "hover:bg-gray-200"
+                  ? "bg-orange-700 text-white cursor-pointer"
+                  : "hover:bg-gray-200 cursor-pointer"
               }`}
             >
               {i + 1}
@@ -132,7 +132,7 @@ export default function SerpPage() {
           <button
             disabled={currentPage === totalPages}
             onClick={() => setCurrentPage((p) => p + 1)}
-            className="px-3 py-1 border rounded disabled:opacity-50 hover:bg-orange-700 transition"
+            className="px-3 py-1 border rounded disabled:opacity-50 hover:bg-orange-700 transition cursor-pointer"
           >
             Next
           </button>

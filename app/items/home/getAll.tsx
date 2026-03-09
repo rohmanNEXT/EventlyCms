@@ -100,7 +100,7 @@ export default function GetAll() {
             <button
               onClick={() => goToPage(currentPage - 1)}
               disabled={currentPage === 1}
-              className="px-3 py-1 border rounded disabled:opacity-40"
+              className="px-3 py-1 border rounded disabled:opacity-40 cursor-pointer"
             >
               Prev
             </button>
@@ -111,8 +111,8 @@ export default function GetAll() {
                 onClick={() => goToPage(i + 1)}
                 className={`px-3 py-1 border rounded ${
                   currentPage === i + 1
-                    ? "bg-orange-700 text-white"
-                    : "hover:bg-gray-100"
+                    ? "bg-orange-700 text-white cursor-pointer"
+                    : "hover:bg-gray-100 cursor-pointer"
                 }`}
               >
                 {i + 1}
@@ -122,7 +122,7 @@ export default function GetAll() {
             <button
               onClick={() => goToPage(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className="px-3 py-1 border rounded disabled:opacity-40"
+              className="px-3 py-1 border rounded disabled:opacity-40 cursor-pointer"
             >
               Next
             </button>
