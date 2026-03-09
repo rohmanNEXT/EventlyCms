@@ -42,7 +42,7 @@ export default function Navbar() {
           <CButton
             color="light"
             variant="outline"
-            className="border border-[#440806] rounded-full px-4 py-1 ml-9 hover:bg-[#ffa071] hover:text-[#0a2e47] transition"
+            className="border border-[#440806] rounded-full px-4 py-1 ml-9 hover:bg-[#ffa071] hover:text-[#0a2e47] transition cursor-pointer"
           >
       Office Map →
           </CButton>
