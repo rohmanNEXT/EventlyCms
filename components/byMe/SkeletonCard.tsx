@@ -168,7 +168,7 @@ export function SkeletonSearch({ className }: { className?: string }) {
 export function SkeletonSearch_2({ className }: { className?: string }) {
   return (
     <div className={cn("w-full mx-auto px-4 flex justify-center items-center", className)}>
-      <div className="h-11 w-full max-w-sm rounded-full bg-white/60 shadow-sm border border-orange-200/40 flex items-center px-4 gap-3">
+      <div className="h-11 w-94 rounded-full bg-white/60 shadow-sm border border-orange-200/40 flex items-center px-4 gap-3">
         <Skeleton className="w-4 h-4 rounded-full bg-gray-300/60 shrink-0" />
         <Skeleton className="h-3 w-28 rounded-full bg-gray-300/30" />
       </div>
