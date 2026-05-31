@@ -165,8 +165,8 @@ const ExplorePage: React.FC = () => {
 
 
   return (
-    <div className="w-full relative min-h-screen pt-24 bg-[#FFFAF7] max-w-7xl mx-auto">
-      <section className="pt-10 pb-12 border-b border-neutral-400/70 max-w-6xl mx-auto">
+    <div className="w-full relative min-h-screen pt-4 bg-[#FFFAF7] max-w-7xl mx-auto">
+      <section className="pb-12 max-w-6xl mx-auto">
         <div className="max-w-4xl w-full mx-auto text-center flex flex-col items-center">
           <h1 className="text-2xl md:text-3xl font-semibold text-neutral-800 mb-6">
             Find Event
@@ -185,7 +185,7 @@ const ExplorePage: React.FC = () => {
                 placeholder="Search events…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="w-full pl-11 pr-5 py-3 rounded-full bg-white text-sm text-neutral-800 border border-neutral-400/80 outline-none shadow-md"
+                className="w-full pl-11 pr-5 py-3 rounded-full text-sm text-neutral-950 border border-neutral-950 outline-none shadow-md placeholder-neutral-600"
               />
             </div>
           )}
@@ -202,8 +202,8 @@ const ExplorePage: React.FC = () => {
           ) : (
             <>
               {categories.length > 0 && (
-                <div className="group/filter flex-1 bg-white p-4 rounded-2xl border border-orange-400/70 shadow-sm flex flex-col">
-                  <h3 className="flex items-center gap-2 text-[15px] font-semibold text-neutral-800 mb-3 pb-2.5 border-b border-orange-400/70 shrink-0">
+                <div className="group/filter flex-1 bg-white p-4 rounded-2xl border border-orange-650/70 shadow-sm flex flex-col">
+                  <h3 className="flex items-center gap-2 text-[15px] font-semibold text-neutral-800 mb-3 pb-2.5 border-b border-orange-650/70 shrink-0">
                     <LuTag size={15} className="text-orange-800" />
                     Categories
                   </h3>
@@ -212,7 +212,7 @@ const ExplorePage: React.FC = () => {
                       <button
                         onClick={() => setActiveCategory(null)}
                         className={`text-left px-3 py-2 rounded-xl text-[13px] font-medium transition ${activeCategory === null
-                          ? "bg-orange-500 text-white shadow-sm"
+                          ? "bg-orange-800 text-white shadow-sm"
                           : "text-neutral-800 hover:bg-orange-50"
                           }`}
                       >
@@ -223,7 +223,7 @@ const ExplorePage: React.FC = () => {
                           key={cat}
                           onClick={() => setActiveCategory(cat)}
                           className={`text-left px-3 py-2 rounded-xl text-[13px] font-medium transition ${activeCategory === cat
-                            ? "bg-orange-500 text-white shadow-sm"
+                            ? "bg-orange-800 text-white shadow-sm"
                             : "text-neutral-800 hover:bg-orange-50"
                             }`}
                         >
@@ -236,8 +236,8 @@ const ExplorePage: React.FC = () => {
               )}
 
               {countries.length > 0 && (
-                <div className="group/filter flex-1 bg-white p-4 rounded-2xl border border-orange-400/70 shadow-sm flex flex-col">
-                  <h3 className="flex items-center gap-2 text-[15px] font-semibold text-neutral-800 mb-3 pb-2.5 border-b border-orange-400/70 shrink-0">
+                <div className="group/filter flex-1 bg-white p-4 rounded-2xl border border-orange-650/70 shadow-sm flex flex-col">
+                  <h3 className="flex items-center gap-2 text-[15px] font-semibold text-neutral-800 mb-3 pb-2.5 border-b border-orange-650/70 shrink-0">
                     <LuMapPin size={15} className="text-orange-800" />
                     Locations
                   </h3>
@@ -249,7 +249,7 @@ const ExplorePage: React.FC = () => {
                           setActiveLocation(null);
                         }}
                         className={`text-left px-3 py-2 rounded-xl text-[13px] font-medium transition ${activeCountry === null
-                          ? "bg-orange-500 text-white shadow-sm"
+                          ? "bg-orange-800 text-white shadow-sm"
                           : "text-neutral-800 hover:bg-orange-50"
                           }`}
                       >
@@ -275,7 +275,7 @@ const ExplorePage: React.FC = () => {
                                 setActiveLocation(null);
                               }}
                               className={`text-left px-3 py-2 rounded-xl text-[13px] font-medium transition flex justify-between items-center ${isActiveCountry
-                                ? "bg-orange-500 text-white shadow-sm"
+                                ? "bg-orange-800 text-white shadow-sm"
                                 : "text-neutral-800 hover:bg-orange-50"
                                 }`}
                             >
@@ -290,7 +290,7 @@ const ExplorePage: React.FC = () => {
                             </button>
 
                             {isActiveCountry && countryLocations.length > 0 && (
-                              <div className="flex flex-col gap-1 pl-4 mt-1 border-l-2 border-orange-400/70 ml-3 mb-1">
+                              <div className="flex flex-col gap-1 pl-4 mt-1 border-l-2 border-orange-650/70 ml-3 mb-1">
                                 {countryLocations.map((loc) => {
                                   const isActiveLoc = activeLocation === loc;
                                   return (
@@ -333,7 +333,7 @@ const ExplorePage: React.FC = () => {
                  <div className="text-base md:text-lg font-semibold text-neutral-800">
                     Results
                   </div>
-                <p className="w-fit text-[11px] md:text-xs px-3 py-1 bg-white text-neutral-800 rounded-full font-semibold uppercase tracking-wider border border-orange-400/70">
+                <p className="w-fit text-[11px] md:text-xs px-3 py-1 bg-white text-neutral-800 rounded-full font-semibold uppercase tracking-wider border border-orange-650/70">
                   {filtered.length} visible{filtered.length !== 1 ? "s" : ""}
                 </p>
               </>
@@ -350,7 +350,7 @@ const ExplorePage: React.FC = () => {
             )}
 
             {error && !loading && (
-              <div className="w-full flex-1 flex flex-col items-center justify-center text-center py-20 bg-white rounded-3xl border border-orange-400/70">
+              <div className="w-full flex-1 flex flex-col items-center justify-center text-center py-20 bg-white rounded-3xl border border-orange-650/70">
                 <p className="text-3xl md:text-4xl mb-4">⚠️</p>
                 <h3 className="text-base md:text-lg font-semibold text-neutral-800">
                   Something went wrong
@@ -365,7 +365,7 @@ const ExplorePage: React.FC = () => {
               !error &&
               events.length > 0 &&
               currentItems.length === 0 && (
-                <div className="w-full flex-1 min-h-[350px] flex flex-col items-center justify-center text-center py-20 bg-white rounded-3xl border border-orange-400/70">
+                <div className="w-full flex-1 min-h-[350px] flex flex-col items-center justify-center text-center py-20 bg-white rounded-3xl border border-orange-650/70">
                   <p className="text-4xl md:text-5xl mb-4 opacity-70">💨</p>
                   <h3 className="text-base md:text-lg font-semibold text-neutral-800">
                     No events found
@@ -377,7 +377,7 @@ const ExplorePage: React.FC = () => {
               )}
 
             {!loading && !error && events.length === 0 && (
-              <div className="w-full flex-1 flex flex-col items-center justify-center text-center py-20 bg-white rounded-3xl border border-orange-400/70">
+              <div className="w-full flex-1 flex flex-col items-center justify-center text-center py-20 bg-white rounded-3xl border border-orange-650/70">
                 <p className="text-4xl md:text-5xl mb-4 opacity-70">🏜️ </p>
                 <h3 className="text-base md:text-lg font-semibold text-neutral-800">
                   Catalogue is empty
@@ -397,7 +397,7 @@ const ExplorePage: React.FC = () => {
                   return (
                     <div
                       key={event.id}
-                      className="bg-white/65 backdrop-blur-2xl border border-[rgba(255,107,44,0.42)] rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] transition-all duration-250 ease-in-out hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(255,107,44,0.15),0_4px_12px_rgba(0,0,0,0.07)] flex flex-col overflow-hidden cursor-pointer group h-[400px]"
+                      className="bg-white/65 backdrop-blur-2xl border border-orange-650/42 rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] transition-all duration-250 ease-in-out hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(255,107,44,0.15),0_4px_12px_rgba(0,0,0,0.07)] flex flex-col overflow-hidden cursor-pointer group h-[340px]"
                       onClick={() => router.push(`/items/explore/${event.id}`)}
                     >
                       <div className="relative h-full w-full overflow-hidden rounded-t-2xl group/slider">
@@ -406,9 +406,8 @@ const ExplorePage: React.FC = () => {
                             <Image
                               src={images[idx]}
                               alt={event.title}
-                              width={400}
-                              height={224}
-                              className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                              fill
+                              className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
                             {images.length > 1 && (
                               <>
@@ -439,7 +438,7 @@ const ExplorePage: React.FC = () => {
                                   <LuArrowRight size={14} />
                                 </button>
 
-                                <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-2 bg-white/10 backdrop-blur-2xl rounded-full border border-neutral-400/60">
+                                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-2 bg-white/10 backdrop-blur-2xl rounded-full border border-neutral-950/60">
                                   {images.map((_, i) => (
                                     <div
                                       key={i}
@@ -461,7 +460,7 @@ const ExplorePage: React.FC = () => {
                         )}
 
                         {event.category && (
-                          <span className="absolute top-3 left-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-sm text-xs font-medium text-orange-800 border border-orange-400/80 z-10">
+                          <span className="absolute top-3 left-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-sm text-xs font-medium text-orange-800 border border-orange-650/80 z-10">
                             <LuTag size={10} />
                             {event.category}
                           </span>
@@ -469,7 +468,7 @@ const ExplorePage: React.FC = () => {
                       </div>
 
                       <div className="flex flex-col flex-1 p-4 gap-2">
-                        <h2 className="h-6 font-semibold text-sm text-neutral-800 line-clamp-2 leading-snug">
+                        <h2 className="h-6 font-semibold text-sm text-neutral-950 line-clamp-2 leading-snug">
                           {event.title || "\u00A0"}
                         </h2>
 
@@ -477,7 +476,7 @@ const ExplorePage: React.FC = () => {
                           {event.location || event.country ? (
                             <LuMapPin
                               size={11}
-                              className="text-orange-400 shrink-0"
+                              className="text-orange-800 shrink-0"
                             />
                           ) : (
                             <div className="w-[11px] shrink-0" />
@@ -523,7 +522,7 @@ const ExplorePage: React.FC = () => {
                     className="invisible pointer-events-none select-none"
                     aria-hidden="true"
                   >
-                    <div className="bg-white/65 backdrop-blur-2xl border border-[rgba(255,107,44,0.42)] rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] transition-all duration-250 ease-in-out hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(255,107,44,0.15),0_4px_12px_rgba(0,0,0,0.07)] flex flex-col overflow-hidden group h-[400px]" />
+                    <div className="bg-white/65 backdrop-blur-2xl border border-orange-650/42 rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] transition-all duration-250 ease-in-out hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(255,107,44,0.15),0_4px_12px_rgba(0,0,0,0.07)] flex flex-col overflow-hidden group h-[400px]" />
                   </div>
                 ))}
               </div>
@@ -543,7 +542,7 @@ const ExplorePage: React.FC = () => {
                     <button
                       disabled={currentPage === 1}
                       onClick={() => setCurrentPage(currentPage - 1)}
-                      className="w-8 h-8 flex items-center justify-center rounded-xl border border-orange-400/80 text-neutral-700 hover:bg-orange-50 hover:text-orange-800 disabled:opacity-30 transition cursor-pointer"
+                      className="w-8 h-8 flex items-center justify-center rounded-xl border border-orange-650/80 text-neutral-700 hover:bg-orange-50 hover:text-orange-800 disabled:opacity-30 transition cursor-pointer"
                     >
                       <LuChevronLeft size={15} />
                     </button>
@@ -553,8 +552,8 @@ const ExplorePage: React.FC = () => {
                         key={i}
                         onClick={() => setCurrentPage(i + 1)}
                         className={`w-8 h-8 rounded-xl text-sm ${currentPage === i + 1
-                          ? "bg-orange-500 text-white shadow-sm shadow-orange-300/40"
-                          : "border border-orange-400/80 text-neutral-800"
+                          ? "bg-orange-800 text-white shadow-sm shadow-orange-800/40"
+                          : "border border-orange-650/80 text-neutral-800"
                           }`}
                       >
                         {i + 1}
@@ -564,7 +563,7 @@ const ExplorePage: React.FC = () => {
                     <button
                       disabled={currentPage === totalPages}
                       onClick={() => setCurrentPage(currentPage + 1)}
-                      className="w-8 h-8 flex items-center justify-center rounded-xl border border-orange-400/80 text-neutral-700 hover:bg-orange-50 hover:text-orange-800 disabled:opacity-30 transition cursor-pointer"
+                      className="w-8 h-8 flex items-center justify-center rounded-xl border border-orange-650/80 text-neutral-700 hover:bg-orange-50 hover:text-orange-800 disabled:opacity-30 transition cursor-pointer"
                     >
                       <LuChevronRight size={15} />
                     </button>

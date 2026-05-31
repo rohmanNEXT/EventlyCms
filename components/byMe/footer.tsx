@@ -15,15 +15,13 @@ const socials = [
 const Footer: React.FC = () => {
 
   return (
-    <footer className="w-full border-t border-neutral-400/80 bg-white/50">
+    <footer className="w-full border-t border-neutral-950/80 bg-white/50">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 py-10">
         <div className="flex flex-col items-center text-center md:flex-row md:items-center md:justify-between md:text-left gap-8">
           {/* Logo + tagline */}
           <div>
-            <div className="text-xl font-semibold bg-gradient-to-br from-[#FF6B2C] to-[#E85A1A] bg-clip-text text-transparent mb-4 md:mb-1">Evently</div>
-            <p className="text-xs text-neutral-600 max-w-[200px] mx-auto md:mx-0">
-              Discover events that matter to you.
-            </p>
+            <div className="text-xl font-semibold text-orange-800 mb-4 md:mb-1">Evently</div>
+
           </div>
 
           {/* Nav links */}
@@ -38,7 +36,7 @@ const Footer: React.FC = () => {
                 key={s.label}
                 href={s.href}
                 aria-label={s.label}
-                className="w-8 h-8 flex items-center justify-center rounded-full bg-orange-50 text-orange-600 border border-orange-400/80 hover:bg-orange-500 hover:text-white transition-all duration-200"
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-orange-50 text-orange-800 border border-orange-650/80 hover:bg-orange-800 hover:text-white transition-all duration-200"
               >
                 {s.icon}
               </a>
@@ -46,7 +44,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-neutral-200 flex flex-col items-center text-center sm:flex-row sm:items-center sm:justify-between sm:text-left gap-4">
+        <div className="mt-3 pt-3 flex flex-col items-center text-center sm:flex-row sm:items-center sm:justify-between sm:text-left gap-4">
           <p className="text-xs text-neutral-600">
             © {new Date().getFullYear()} Evently. All rights reserved.
           </p>

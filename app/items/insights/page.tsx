@@ -62,7 +62,7 @@ const InsightsPage: React.FC = () => {
   }, [range]);
 
   return (
-    <div className="min-h-screen pt-28 pb-20 max-w-4xl mx-auto text-center px-6">
+    <div className="min-h-screen pt-4 pb-20 max-w-4xl mx-auto text-center px-6">
       <div className="w-full">
         {/* Header */}
         <div className="mb-10">
@@ -71,7 +71,7 @@ const InsightsPage: React.FC = () => {
         </div>
 
         {/* Stat boxes */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
   <InsightBox
     label="Visitors"
     value={stats?.totalVisitors ?? 0}
@@ -96,10 +96,9 @@ const InsightsPage: React.FC = () => {
         {loading ? (
              <SkeletonChart />
         ) : (
-            <div className="bg-white/65 backdrop-blur-2xl border border-[rgba(255,107,44,0.52)] rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] p-6 h-[400px]">
+            <div className="bg-white/65 backdrop-blur-2xl border border-orange-650/52 rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] p-6 h-[380px]">
               {/* Card header */}
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-                <div>
+              <div className="flex flex-col items-start justify-start gap-3 mb-6 sm:flex-row sm:items-center sm:justify-between">                 <div>
                   <h2 className="text-base font-semibold text-neutral-800">Visitor Activity</h2>
                   <p className="text-xs text-neutral-600 mt-0.5">Unique visitors over time</p>
                 </div>
@@ -112,8 +111,8 @@ const InsightsPage: React.FC = () => {
                       onClick={() => setRange(r.value)}
                       className={`px-4 py-1.5 rounded-full text-xs font-medium transition cursor-pointer ${
                         range === r.value
-                          ? "bg-orange-500 text-white shadow-sm"
-                          : "text-neutral-600 hover:text-orange-600"
+                          ? "bg-orange-800 text-white shadow-sm"
+                          : "text-neutral-600 hover:text-orange-800"
                       }`}
                     >
                       {r.label}
@@ -124,11 +123,11 @@ const InsightsPage: React.FC = () => {
 
               {/* Chart content */}
               {data.length === 0 ? (
-                <div className="h-64 flex items-center justify-center text-neutral-600 text-sm">
+                <div className="h-56 flex items-center justify-center text-neutral-600 text-sm">
                   No data available for this range.
                 </div>
               ) : (
-                <ResponsiveContainer width="100%" height={280}>
+                <ResponsiveContainer width="100%" height={260}>
                   <AreaChart data={data} margin={{ top: 4, right: 4, left: -20, bottom: 0 }}>
                     <defs>
                       <linearGradient id="visitorGrad" x1="0" y1="0" x2="0" y2="1">
@@ -159,7 +158,7 @@ const InsightsPage: React.FC = () => {
                     <Tooltip
                       contentStyle={{
                         background: "rgba(255,255,255,0.9)",
-                        border: "1px solid rgba(255,107,44,0.52)",
+                        border: "1px solid var(--orange-650)",
                         borderRadius: "0.75rem",
                         boxShadow: "0 4px 20px rgba(255,107,44,0.08)",
                         fontSize: "12px",

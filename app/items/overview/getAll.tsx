@@ -124,7 +124,7 @@ const GetAll: React.FC = () => {
       {/* Page Header - Always Visible */}
       <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
         <div>
-          <div className="text-base font-semibold text-neutral-800 tracking-tight mb-3 sm:mb-0">
+          <div className="text-base font-semibold text-neutral-950 tracking-tight mb-3 sm:mb-0">
             All Events
           </div>
         </div>
@@ -141,8 +141,8 @@ const GetAll: React.FC = () => {
               onClick={() => handleCategory(null)}
               className={`px-4 py-1.5 rounded-full text-xs font-medium transition cursor-pointer ${
                 activeCategory === null
-                  ? "bg-orange-500 text-white shadow-sm"
-                  : "bg-orange-50 text-neutral-800 hover:bg-orange-100 border border-orange-400/90"
+                  ? "bg-orange-800 text-white shadow-sm"
+                  : "bg-orange-50 text-neutral-800 hover:bg-orange-100 border border-orange-650/90"
               }`}
             >
               All
@@ -153,8 +153,8 @@ const GetAll: React.FC = () => {
                 onClick={() => handleCategory(cat)}
                 className={`px-4 py-1.5 rounded-full text-xs font-medium transition cursor-pointer ${
                   activeCategory === cat
-                    ? "bg-orange-500 text-white shadow-sm"
-                    : "bg-orange-50 text-neutral-800 hover:bg-orange-100 border border-orange-400/90"
+                    ? "bg-orange-800 text-white shadow-sm"
+                    : "bg-orange-50 text-neutral-800 hover:bg-orange-100 border border-orange-650/90"
                 }`}
               >
                 {cat}
@@ -190,7 +190,7 @@ const GetAll: React.FC = () => {
               key="error"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="w-full py-20 text-center bg-white rounded-3xl border border-orange-400/90"
+              className="w-full py-20 text-center bg-white rounded-3xl border border-orange-650/90"
             >
               <p className="text-sm text-neutral-700">Could not load events.</p>
             </motion.div>
@@ -202,7 +202,7 @@ const GetAll: React.FC = () => {
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               {currentItems.length === 0 ? (
-                <div className="text-center py-20 text-neutral-600 border border-neutral-500 rounded-3xl h-auto sm:h-auto lg:h-[1260px]">
+                <div className="text-center py-20 text-neutral-600 border border-neutral-950 rounded-3xl h-auto sm:h-auto lg:h-[1260px]">
                   <p className="text-4xl mb-3">🎪</p>
                   <p>No events found.</p>
                 </div>
@@ -215,7 +215,7 @@ const GetAll: React.FC = () => {
                   return (
                     <div
                       key={event.id}
-                      className="bg-white/65 backdrop-blur-2xl border border-[rgba(255,107,44,0.52)] rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] transition-all duration-250 ease-in-out hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(255,107,44,0.15),0_4px_12px_rgba(0,0,0,0.07)] flex flex-col overflow-hidden cursor-pointer group h-[400px]"
+                      className="bg-white/65 backdrop-blur-2xl border border-orange-650/52 rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] transition-all duration-250 ease-in-out hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(255,107,44,0.15),0_4px_12px_rgba(0,0,0,0.07)] flex flex-col overflow-hidden cursor-pointer group"
                       onClick={() => router.push(`/items/explore/${event.id}`)}
                     >
                       <div className="relative h-56 w-full overflow-hidden rounded-t-2xl group/slider">
@@ -265,7 +265,7 @@ const GetAll: React.FC = () => {
                         )}
 
                         {event.category && (
-                          <span className="absolute top-3 left-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-sm text-xs font-medium text-orange-600 border border-orange-400/90 z-10">
+                          <span className="absolute top-3 left-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-sm text-xs font-medium text-orange-800 border border-orange-650/90 z-10">
                             <LuTag size={10} />
                             {event.category}
                           </span>
@@ -278,7 +278,7 @@ const GetAll: React.FC = () => {
                         </h2>
 
                         <div className="h-4 flex items-center gap-1 text-xs text-neutral-600">
-                           <LuMapPin size={11} className="text-orange-400 shrink-0" />
+                           <LuMapPin size={11} className="text-orange-800 shrink-0" />
                           <span className="truncate">
                             {[event.location, event.country].filter(Boolean).join(", ")}
                           </span>
@@ -292,7 +292,7 @@ const GetAll: React.FC = () => {
                           )}
                         </div>
 
-                        <button className="mt-auto pt-3 flex items-center gap-1 text-xs font-semibold text-orange-600">
+                        <button className="mt-auto pt-3 flex items-center gap-1 text-xs font-semibold text-orange-800">
                           View Details <LuArrowRight size={13} />
                         </button>
                       </div>
@@ -307,7 +307,7 @@ const GetAll: React.FC = () => {
                 <button
                   disabled={currentPage === 1}
                   onClick={() => setCurrentPage(currentPage - 1)}
-                  className="w-8 h-8 flex items-center justify-center rounded-xl border border-orange-400/90 text-neutral-700 disabled:opacity-30"
+                  className="w-8 h-8 flex items-center justify-center rounded-xl border border-orange-650/90 text-neutral-700 disabled:opacity-30"
                 >
                   <LuChevronLeft size={15} />
                 </button>
@@ -318,8 +318,8 @@ const GetAll: React.FC = () => {
                     onClick={() => setCurrentPage(i + 1)}
                     className={`w-8 h-8 rounded-xl text-sm ${
                       currentPage === i + 1
-                        ? "bg-orange-500 text-white shadow-sm shadow-orange-300/40"
-                        : "border border-orange-400/90 text-neutral-800"
+                        ? "bg-orange-800 text-white shadow-sm shadow-orange-800/40"
+                        : "border border-orange-650/90 text-neutral-800"
                     }`}
                   >
                     {i + 1}
@@ -329,7 +329,7 @@ const GetAll: React.FC = () => {
                 <button
                   disabled={currentPage === totalPages}
                   onClick={() => setCurrentPage(currentPage + 1)}
-                  className="w-8 h-8 flex items-center justify-center rounded-xl border border-orange-400/90 text-neutral-700 disabled:opacity-30"
+                  className="w-8 h-8 flex items-center justify-center rounded-xl border border-orange-650/90 text-neutral-700 disabled:opacity-30"
                 >
                   <LuChevronRight size={15} />
                 </button>

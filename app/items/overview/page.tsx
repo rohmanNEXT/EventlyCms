@@ -30,7 +30,7 @@ const OverviewPage: React.FC = () => {
       {/* Hero - Always Visible */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
         <div className="max-w-2xl">
-          <span className="inline-block mb-4 px-3 py-1 rounded-full bg-white text-xs font-semibold text-neutral-800 border border-orange-400/90">
+          <span className="inline-block mb-4 px-3 py-1 rounded-full bg-white text-xs font-semibold text-neutral-950 border border-orange-700">
             Discover · Explore · Connect
           </span>
 
@@ -40,7 +40,7 @@ const OverviewPage: React.FC = () => {
             <span className="text-black">That Matter</span>
           </h1>
 
-          <p className="mt-4 text-sm text-neutral-600">
+          <p className="mt-4 text-sm text-neutral-700">
             Curated events from around the world.
           </p>
 
@@ -52,14 +52,14 @@ const OverviewPage: React.FC = () => {
               <div className="relative w-full max-w-sm">
                 <LuSearch
                   size={17}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-600"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-950"
                 />
                 <input
                   type="text"
                   placeholder="Search events…"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  className="w-full pl-11 pr-5 py-3 rounded-full bg-white text-sm text-neutral-800 border border-neutral-400/90 outline-none shadow-md"
+                  className="w-full pl-11 pr-5 py-3 rounded-full text-sm text-neutral-950 border border-neutral-950 outline-none shadow-md placeholder-neutral-600"
                 />
               </div>
             )}

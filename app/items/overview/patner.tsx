@@ -34,7 +34,7 @@ const PatnerSlider: React.FC<PatnerSliderProps> = ({ loading }) => {
 
   if (loading) {
     return (
-      <section className="relative py-8 mb-20 overflow-hidden border-y border-neutral-400/80">
+      <section className="relative py-8 mb-20 overflow-hidden border-y border-neutral-950/80">
         <p className="text-center text-xs font-semibold uppercase tracking-widest text-neutral-600 mb-8">
           Main Sponsors
         </p>
@@ -51,7 +51,7 @@ const PatnerSlider: React.FC<PatnerSliderProps> = ({ loading }) => {
 
 
   return (
-    <section className="relative py-8 mb-20 overflow-hidden border-y border-neutral-400/80">
+    <section className="relative py-8 mb-20 overflow-hidden border-y border-neutral-950/80">
       {/* Fade edges */}
       <div className="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-[#FFFAF7] to-transparent z-10 pointer-events-none" />
       <div className="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-[#FFFAF7] to-transparent z-10 pointer-events-none" />
@@ -76,7 +76,7 @@ const PatnerSlider: React.FC<PatnerSliderProps> = ({ loading }) => {
           {items.map((partner, i) => (
             <div
               key={i}
-              className="flex flex-col items-center justify-center gap-2 mx-5 px-6 py-4 rounded-2xl bg-white/70 backdrop-blur-sm border border-orange-400/90 shadow-sm shadow-orange-50/40 min-w-[96px] hover:shadow-md hover:border-orange-400/60 transition-all duration-200"
+              className="flex flex-col items-center justify-center gap-2 mx-5 px-6 py-4 rounded-2xl bg-white/70 backdrop-blur-sm border border-orange-650/90 shadow-sm shadow-orange-50/40 min-w-[96px] hover:shadow-md hover:border-orange-650/60 transition-all duration-200"
             >
               <span className="text-neutral-700 group-hover:text-orange-800 transition">
                 {partner.icon}

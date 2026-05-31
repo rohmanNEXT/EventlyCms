@@ -46,7 +46,7 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen pt-28 pb-20 px-6 text-center">
+    <div className="min-h-screen pt-4 pb-20 px-6 text-center">
       <div className="max-w-xl mx-auto">
         {/* Header */}
         <div className="mb-10">
@@ -63,7 +63,7 @@ const ContactPage: React.FC = () => {
             {/* Success alert */}
             {status === "success" && (
               <div
-                className="mb-6 flex items-center gap-3 px-5 py-4 rounded-2xl bg-emerald-50 border border-neutral-400/60 text-emerald-700 text-sm"
+                className="mb-6 flex items-center gap-3 px-5 py-4 rounded-2xl bg-emerald-50 border border-neutral-950/60 text-emerald-700 text-sm"
               >
                 <span className="text-lg">✅</span>
                 Message sent! We&apos;ll get back to you soon.
@@ -73,7 +73,7 @@ const ContactPage: React.FC = () => {
             {/* Error alert */}
             {status === "error" && (
               <div
-                className="mb-6 flex items-center gap-3 px-5 py-4 rounded-2xl bg-red-50 border border-neutral-400/60 text-red-600 text-sm"
+                className="mb-6 flex items-center gap-3 px-5 py-4 rounded-2xl bg-red-50 border border-neutral-950/60 text-red-600 text-sm"
               >
                 <span className="text-lg">⚠️</span>
                 Something went wrong. Please try again.
@@ -83,7 +83,7 @@ const ContactPage: React.FC = () => {
             {/* Form */}
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="bg-white/65 backdrop-blur-2xl border border-[rgba(255,107,44,0.52)] rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] p-8 flex flex-col gap-5"
+              className="bg-white/65 backdrop-blur-2xl border border-orange-650/52 rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] p-8 flex flex-col gap-5"
               id="contact-form"
             >
               {/* Name */}
@@ -91,14 +91,14 @@ const ContactPage: React.FC = () => {
                 <div className="relative">
                   <LuUser
                     size={15}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-950 pointer-events-none"
                   />
                   <input
                     id="contact-name"
                     type="text"
                     placeholder="Your name"
                     {...register("name")}
-                    className="w-full pl-10 pr-4 py-3.5 rounded-2xl bg-orange-50/50 border border-orange-400/60 text-sm text-neutral-800 placeholder-neutral-400 transition-all duration-200 focus:outline-none focus:border-orange-400 focus:ring-3 focus:ring-orange-500/15"
+                    className="w-full pl-10 pr-4 py-3.5 rounded-2xl bg-orange-50/50 border border-neutral-950 text-sm text-neutral-950 placeholder-neutral-760 transition-all duration-200 focus:outline-none focus:border-orange-650 focus:ring-3 focus:ring-orange-500/15"
                   />
                 </div>
                 {errors.name && (
@@ -111,14 +111,14 @@ const ContactPage: React.FC = () => {
                 <div className="relative">
                   <LuMail
                     size={15}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-950 pointer-events-none"
                   />
                   <input
                     id="contact-email"
                     type="email"
                     placeholder="Your email"
                     {...register("email")}
-                    className="w-full pl-10 pr-4 py-3.5 rounded-2xl bg-orange-50/50 border border-orange-400/60 text-sm text-neutral-800 placeholder-neutral-400 transition-all duration-200 focus:outline-none focus:border-orange-400 focus:ring-3 focus:ring-orange-500/15"
+                    className="w-full pl-10 pr-4 py-3.5 rounded-2xl bg-orange-50/50 border border-neutral-950 text-sm text-neutral-950 placeholder-neutral-600 transition-all duration-200 focus:outline-none focus:border-orange-650 focus:ring-3 focus:ring-orange-500/15"
                   />
                 </div>
                 {errors.email && (
@@ -131,14 +131,14 @@ const ContactPage: React.FC = () => {
                 <div className="relative">
                   <LuMessageSquare
                     size={15}
-                    className="absolute left-4 top-4 text-neutral-400 pointer-events-none"
+                    className="absolute left-4 top-4 text-neutral-950 pointer-events-none"
                   />
                   <textarea
                     id="contact-message"
                     placeholder="Your message…"
                     rows={5}
                     {...register("message")}
-                    className="w-full pl-10 pr-4 py-3.5 rounded-2xl bg-orange-50/50 border border-orange-400/60 text-sm text-neutral-800 placeholder-neutral-400 transition-all duration-200 focus:outline-none focus:border-orange-400 focus:ring-3 focus:ring-orange-500/15 resize-none"
+                    className="w-full pl-10 pr-4 py-3.5 rounded-2xl bg-orange-50/50 border border-neutral-950 text-sm text-neutral-950 placeholder-neutral-600 transition-all duration-200 focus:outline-none focus:border-orange-650 focus:ring-3 focus:ring-orange-500/15 resize-none"
                   />
                 </div>
                 {errors.message && (
@@ -151,7 +151,7 @@ const ContactPage: React.FC = () => {
                 id="contact-submit"
                 type="submit"
                 disabled={status === "loading"}
-                className="flex items-center justify-center gap-2 py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 active:scale-[0.98] text-white text-sm font-semibold transition-all duration-200 shadow-sm shadow-orange-300/40 disabled:opacity-60 cursor-pointer"
+                className="flex items-center justify-center gap-2 py-3.5 rounded-full bg-orange-800 hover:bg-orange-900 active:scale-[0.98] text-white text-sm font-semibold transition-all duration-200 shadow-sm shadow-orange-800/40 disabled:opacity-60 cursor-pointer"
               >
                 {status === "loading" ? (
                   <>

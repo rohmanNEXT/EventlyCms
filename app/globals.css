@@ -3,22 +3,22 @@
 :root {
   --radius: 0.75rem;
   --background: #FFFAF7;
-  --foreground: #1A0F0A;
+  --foreground: #0A0502;
   --card: rgba(255,255,255,0.7);
-  --card-foreground: #1A0F0A;
+  --card-foreground: #0A0502;
   --popover: #FFF5EE;
-  --popover-foreground: #1A0F0A;
+  --popover-foreground: #0A0502;
   --primary: #FF6B2C;
   --primary-foreground: #ffffff;
   --secondary: #FFF0E6;
-  --secondary-foreground: #7C3A1E;
+  --secondary-foreground: #4A1A0A;
   --muted: #F8EFE8;
-  --muted-foreground: #9B6B50;
+  --muted-foreground: #6B3B20;
   --accent: #FF8C5A;
   --accent-foreground: #ffffff;
   --destructive: #E84B3A;
-  --border: rgba(255,107,44,0.15);
-  --input: rgba(255,107,44,0.1);
+  --border: rgba(214,82,21,0.5);
+  --input: rgba(214,82,21,0.35);
   --ring: #FF6B2C;
 
   /* Orange palette */
@@ -29,6 +29,7 @@
   --orange-400: #FF8C5A;
   --orange-500: #FF6B2C;
   --orange-600: #E85A1A;
+  --orange-650: #D65215;
   --orange-700: #C44B10;
   --orange-800: #9E3E0D;
   --orange-900: #7C2F09;
@@ -80,6 +81,7 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-orange-650: var(--orange-650);
 }
 
 @layer base {

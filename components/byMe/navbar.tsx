@@ -51,7 +51,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/10 md:bg-white/20 backdrop-blur-2xl border-b border-orange-400/50 shadow-sm shadow-orange-100/10"
+          ? "bg-white/10 md:bg-white/20 backdrop-blur-2xl border-b border-orange-650/50 shadow-sm shadow-orange-100/10"
           : "bg-orange-50/10 backdrop-blur-2xl md:backdrop-blur-xl border-b border-white/50"
       }`}
     >
@@ -59,7 +59,7 @@ export default function Navbar() {
         {/* Logo */}
         <button
           onClick={() => router.push("/items/overview")}
-          className="text-2xl font-semibold tracking-tight cursor-pointer bg-gradient-to-br from-[#FF6B2C] to-[#E85A1A] bg-clip-text text-transparent"
+          className="text-2xl font-semibold tracking-tight cursor-pointer text-orange-800"
         >
           Evently
         </button>
@@ -79,7 +79,7 @@ export default function Navbar() {
               {link.label}
               {/* Active indicator */}
               <span
-                className={`absolute -bottom-1 left-0 h-0.5 rounded-full bg-orange-500 transition-all duration-300 ${
+                className={`absolute -bottom-1 left-0 h-0.5 rounded-full bg-orange-800 transition-all duration-300 ${
                   isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
                 }`}
               />
@@ -90,7 +90,7 @@ export default function Navbar() {
         {/* CTA desktop */}
         <button
           onClick={() => router.push("/items/explore")}
-          className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 transition-all duration-200 shadow-sm shadow-orange-300/40 cursor-pointer"
+          className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium text-white bg-orange-800 hover:bg-orange-900 transition-all duration-200 shadow-sm shadow-orange-800/40 cursor-pointer"
         >
           Find Events →
         </button>
@@ -114,7 +114,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-white/10 backdrop-blur-2xl border-t border-orange-400/50 py-4 px-6 flex flex-col gap-2"
+            className="md:hidden bg-white/10 backdrop-blur-2xl border-t border-orange-650/50 py-4 px-6 flex flex-col gap-2"
           >
             {navLinks.map((link) => (
               <button
@@ -131,7 +131,7 @@ export default function Navbar() {
             ))}
             <button
               onClick={() => router.push("/items/explore")}
-              className="mt-2 w-full py-3 rounded-full text-sm font-semibold text-white bg-orange-500 hover:bg-orange-600 transition cursor-pointer"
+              className="mt-2 w-full py-3 rounded-full text-sm font-semibold text-white bg-orange-800 hover:bg-orange-900 transition cursor-pointer"
             >
               Find Events →
             </button>

@@ -97,7 +97,7 @@ const EventDetailPage: React.FC = () => {
           <h2 className="text-xl font-semibold text-neutral-700 mb-2">Event not found</h2>
           <button
             onClick={() => router.back()}
-            className="mt-4 px-5 py-2 rounded-full bg-orange-500 text-white text-sm font-medium hover:bg-orange-600 transition cursor-pointer"
+            className="mt-4 px-5 py-2 rounded-full bg-orange-800 text-white text-sm font-medium hover:bg-orange-900 transition cursor-pointer"
           >
             Go Back
           </button>
@@ -116,7 +116,7 @@ const EventDetailPage: React.FC = () => {
 
           {/* Inline Image slider */}
           {images.length > 0 && (
-            <div className="mb-8 group/slider relative w-full h-[320px] md:h-[480px] rounded-3xl overflow-hidden bg-[#FFFAF7] border border-orange-400/80 shadow-sm">
+            <div className="mb-8 group/slider relative w-full h-[320px] md:h-[480px] rounded-3xl overflow-hidden bg-[#FFFAF7] border border-orange-650/80 shadow-sm">
               <Image
                 src={images[currentImageIndex]}
                 alt={event.title}
@@ -140,7 +140,7 @@ const EventDetailPage: React.FC = () => {
                   </button>
 
                   {/* Pagination Dots */}
-                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-2 bg-white/10 backdrop-blur-2xl rounded-full border border-neutral-400/80">
+                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-2 bg-white/10 backdrop-blur-2xl rounded-full border border-neutral-950/80">
                     {images.map((_, i) => (
                       <button
                         key={i}
@@ -156,7 +156,7 @@ const EventDetailPage: React.FC = () => {
           <div className="flex flex-col items-center text-center">
             {/* Category badge */}
             {event.category && (
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 border border-orange-400/80 text-xs font-medium text-orange-800 mb-4">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 border border-orange-650/80 text-xs font-medium text-orange-800 mb-4">
                 <LuTag size={11} />
                 {event.category}
               </span>
@@ -170,8 +170,8 @@ const EventDetailPage: React.FC = () => {
             {/* Author & Link Tujuan */}
             <div className="flex flex-col items-center gap-5 mt-4 mb-8">
               {/* Author Profile */}
-              <div className="flex items-center gap-3 bg-[#FFFAF7] px-4 py-2 rounded-full border border-orange-400/80 shadow-sm">
-                <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center overflow-hidden border border-orange-400/80 shrink-0">
+              <div className="flex items-center gap-3 bg-[#FFFAF7] px-4 py-2 rounded-full border border-orange-650/80 shadow-sm">
+                <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center overflow-hidden border border-orange-650/80 shrink-0">
                   <Image 
                     src={`https://api.dicebear.com/7.x/notionists/svg?seed=${encodeURIComponent((event?.author || event?.id || 'evently').trim())}`} 
                     alt="Author" 
@@ -193,7 +193,7 @@ const EventDetailPage: React.FC = () => {
               {/* Link Tujuan */}
               <a
                 href={`/items/serp/${event.id}`}
-                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-orange-500 to-orange-400 hover:opacity-90 text-white text-sm font-semibold transition-all shadow-[0_4px_14px_0_rgb(249,115,22,0.39)]"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-orange-800 to-orange-700 hover:opacity-90 text-white text-sm font-semibold transition-all shadow-[0_4px_14px_0_rgba(158,62,13,0.39)]"
               >
                 <span>Book Now </span>
                 <LuArrowRight size={16} />
@@ -216,9 +216,9 @@ const EventDetailPage: React.FC = () => {
             return (
               <div className="mt-12 space-y-6">
                 {/* Location Text Card */}
-                <div className="overflow-hidden rounded-2xl bg-[#FFFAF7] border border-orange-400/80 shadow-sm">
+                <div className="overflow-hidden rounded-2xl bg-[#FFFAF7] border border-orange-650/80 shadow-sm">
                   <div className="flex flex-col items-center text-center gap-3 p-6">
-                    <div className="w-10 h-10 shrink-0 rounded-full bg-white flex items-center justify-center shadow-sm border border-orange-400/80">
+                    <div className="w-10 h-10 shrink-0 rounded-full bg-white flex items-center justify-center shadow-sm border border-orange-650/80">
                       <LuMapPin size={18} className="text-orange-800" />
                     </div>
                     <div className="flex flex-col items-center">
@@ -238,7 +238,7 @@ const EventDetailPage: React.FC = () => {
                 </div>
 
                 {/* Map Card */}
-                <div className="w-full h-96 bg-orange-50/50 rounded-2xl overflow-hidden border border-orange-400/80 shadow-sm relative">
+                <div className="w-full h-96 bg-orange-50/50 rounded-2xl overflow-hidden border border-orange-650/80 shadow-sm relative">
                   <iframe
                     width="100%"
                     height="100%"

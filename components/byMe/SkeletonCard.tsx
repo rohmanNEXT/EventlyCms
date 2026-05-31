@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
  */
 export function SkeletonInsightBox() {
   return (
-    <div className="bg-white/65 backdrop-blur-2xl border border-[rgba(255,107,44,0.52)] rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] flex items-center gap-4 p-5 h-full w-full max-w-full overflow-hidden">
+    <div className="bg-white/65 backdrop-blur-2xl border border-orange-650/52 rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] flex items-center gap-4 p-5 h-full w-full max-w-full overflow-hidden">
       <Skeleton className="w-8 h-10 rounded-2xl bg-orange-100/50 shrink-0" />
       <div className="flex flex-col gap-2 w-full">
         <Skeleton className="h-3 w-16 rounded-full bg-gray-200/60" />
@@ -22,7 +22,7 @@ export function SkeletonInsightBox() {
  */
 export function SkeletonChart() {
   return (
-    <div className="bg-white/65 backdrop-blur-2xl border border-[rgba(255,107,44,0.52)] rounded-[1.25rem] shadow-sm p-6 h-[400px] w-full max-w-full flex flex-col overflow-hidden">
+    <div className="bg-white/65 backdrop-blur-2xl border border-orange-650/52 rounded-[1.25rem] shadow-sm p-6 h-[380px] w-full max-w-full flex flex-col overflow-hidden">
       <div className="flex flex-col sm:flex-row sm:justify-between items-start gap-4 mb-10">
         <div className="space-y-2">
           <Skeleton className="h-5 w-40 rounded-lg bg-gray-200/80" />
@@ -50,11 +50,11 @@ export function SkeletonHero() {
   return (
     <section className="min-h-screen w-full flex flex-col items-center justify-center text-center px-6">
       <div className="max-w-2xl w-full flex flex-col items-center">
-        <Skeleton className="h-7 w-48 rounded-full bg-white border border-orange-400/70 mb-4" />
+        <Skeleton className="h-7 w-48 rounded-full bg-white border border-orange-650/70 mb-4" />
         <Skeleton className="h-12 w-full max-w-lg rounded-xl bg-gray-200/80 mt-2" />
         <Skeleton className="h-10 w-full max-w-sm rounded-xl bg-gray-200/80 mt-4" />
         <Skeleton className="h-4 w-full max-w-xs rounded-full bg-gray-200/60 mt-8" />
-        <Skeleton className="h-12 w-full max-w-md rounded-full bg-white shadow-md border border-neutral-400 mt-8" />
+        <Skeleton className="h-12 w-full max-w-md rounded-full bg-white shadow-md border border-neutral-950 mt-8" />
       </div>
     </section>
   );
@@ -65,7 +65,7 @@ export function SkeletonHero() {
  */
 export function SkeletonEventCard() {
   return (
-    <div className="bg-white/65 backdrop-blur-2xl border border-[rgba(255,107,44,0.52)] rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] flex flex-col overflow-hidden h-[400px] w-full">
+    <div className="bg-white/65 backdrop-blur-2xl border border-orange-650/52 rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] flex flex-col overflow-hidden h-[400px] w-full">
       <Skeleton className="h-56 w-full bg-orange-50/50 rounded-none" />
       <div className="p-4 flex flex-col flex-1 gap-3">
         <Skeleton className="h-5 w-3/4 rounded-full bg-gray-200/80" />
@@ -90,7 +90,7 @@ export function SkeletonEventCard() {
  */
 export function SkeletonPartner() {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 mx-5 px-6 py-4 rounded-2xl bg-white/70 border border-orange-400/90 shadow-sm min-w-[96px] h-[82px]">
+    <div className="flex flex-col items-center justify-center gap-2 mx-5 px-6 py-4 rounded-2xl bg-white/70 border border-orange-650/90 shadow-sm min-w-[96px] h-[82px]">
       <Skeleton className="w-8 h-8 rounded-full bg-neutral-100" />
       <Skeleton className="h-2 w-12 rounded-full bg-neutral-100" />
     </div>
@@ -102,7 +102,7 @@ export function SkeletonPartner() {
  */
 export function SkeletonFilter() {
   return (
-    <div className="bg-white p-5 rounded-[1.25rem] border border-[rgba(255,107,44,0.52)] shadow-sm flex flex-col gap-4 w-full">
+    <div className="bg-white p-5 rounded-[1.25rem] border border-orange-650/52 shadow-sm flex flex-col gap-4 w-full">
       <Skeleton className="h-4 w-24 rounded-full bg-neutral-200 mb-2" />
       {[...Array(5)].map((_, i) => (
         <Skeleton key={i} className="h-7 w-full rounded-xl bg-orange-50/50" />
@@ -113,7 +113,7 @@ export function SkeletonFilter() {
 
 export function SkeletonFilter_2() {
   return (
-    <div className="bg-white p-5 rounded-[1.25rem] border border-[rgba(255,107,44,0.52)] shadow-sm flex flex-col gap-4 w-full">
+    <div className="bg-white p-5 rounded-[1.25rem] border border-orange-650/52 shadow-sm flex flex-col gap-4 w-full">
       <Skeleton className="h-4 w-24 rounded-full bg-neutral-200 mb-2" />
       {[...Array(5)].map((_, i) => (
         <Skeleton key={i} className="h-12 w-full rounded-xl bg-orange-50/50" />
@@ -127,11 +127,11 @@ export function SkeletonFilter_2() {
  */
 export function SkeletonContactForm() {
   return (
-    <div className="bg-white/65 backdrop-blur-2xl border border-[rgba(255,107,44,0.52)] rounded-[1.25rem] p-6 md:p-10 flex flex-col gap-6 w-full max-w-xl mx-auto shadow-lg">
+    <div className="bg-white/65 backdrop-blur-2xl border border-orange-650/52 rounded-[1.25rem] p-6 md:p-10 flex flex-col gap-6 w-full max-w-xl mx-auto shadow-lg">
       <Skeleton className="h-12 w-full rounded-2xl bg-gray-200/60" />
       <Skeleton className="h-12 w-full rounded-2xl bg-gray-200/60" />
       <Skeleton className="h-[120px] w-full rounded-2xl bg-gray-200/60" />
-      <Skeleton className="h-12 w-full rounded-full bg-orange-400/20" />
+      <Skeleton className="h-12 w-full rounded-full bg-orange-800/20" />
     </div>
   );
 }
@@ -156,7 +156,7 @@ export function SkeletonPagination() {
  */
 export function SkeletonHeader() {
   return (
-    <Skeleton className="h-7 min-w-20 w-auto px-4 rounded-full bg-orange-50/50 border border-orange-200/60" />
+    <Skeleton className="h-7 min-w-20 w-auto px-4 rounded-full bg-orange-50/50 border border-orange-650/60" />
   );
 }
 
@@ -166,7 +166,7 @@ export function SkeletonHeader() {
 export function SkeletonSearch({ className }: { className?: string }) {
   return (
     <div className={`w-full mx-auto px-4 flex justify-center items-center ${className || ""}`}>
-      <div className="h-11 w-full max-w-[384px] rounded-full bg-white/60 shadow-sm border border-orange-200/60 flex items-center px-4 gap-3">
+      <div className="h-11 w-full max-w-[384px] rounded-full bg-white/60 shadow-sm border border-orange-650/60 flex items-center px-4 gap-3">
         <Skeleton className="w-4 h-4 rounded-full bg-gray-300/60 shrink-0" />
         <Skeleton className="h-3 w-28 rounded-full bg-gray-300/30" />
       </div>
@@ -180,7 +180,7 @@ export function SkeletonSearch({ className }: { className?: string }) {
 export function SkeletonSearch_2({ className }: { className?: string }) {
   return (
     <div className={`w-full mx-auto px-4 flex justify-center items-center ${className || ""}`}>
-      <div className="h-11 w-94 rounded-full bg-white/60 shadow-sm border border-orange-200/70 flex items-center px-4 gap-3">
+      <div className="h-11 w-94 rounded-full bg-white/60 shadow-sm border border-orange-650/70 flex items-center px-4 gap-3">
         <Skeleton className="w-4 h-4 rounded-full bg-gray-300/60 shrink-0" />
         <Skeleton className="h-3 w-28 rounded-full bg-gray-300/30" />
       </div>

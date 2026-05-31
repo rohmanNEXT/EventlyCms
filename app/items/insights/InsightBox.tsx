@@ -6,9 +6,9 @@ import { LuTrendingUp, LuEye, LuWifi } from "react-icons/lu";
 type InsightType = "visitors" | "visits" | "pageviews";
 
 const iconMap: Record<InsightType, React.ReactNode> = {
-  visitors: <LuTrendingUp size={18} className="text-orange-600" />,
+  visitors: <LuTrendingUp size={18} className="text-orange-800" />,
   visits: <LuWifi size={18} className="text-emerald-500" />,
-  pageviews: <LuEye size={18} className="text-orange-400" />,
+  pageviews: <LuEye size={18} className="text-orange-800" />,
 };
 import { SkeletonInsightBox } from "@/components/byMe/SkeletonCard";
 
@@ -28,7 +28,7 @@ const InsightBox: React.FC<InsightBoxProps> = ({
   if (loading) return <SkeletonInsightBox />;
 
   return (
-    <div className="bg-white/65 backdrop-blur-2xl border border-[rgba(255,107,44,0.52)] rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] flex items-center gap-4 p-5 h-full">
+    <div className="bg-white/65 backdrop-blur-2xl border border-orange-650/52 rounded-[1.25rem] shadow-[0_4px_24px_rgba(255,107,44,0.07),0_1px_4px_rgba(0,0,0,0.05)] flex items-center gap-4 p-5 h-full">
       {/* Icon */}
       <div className="w-10 h-10 rounded-2xl bg-orange-50 flex items-center justify-center">
         {iconMap[type]}
@@ -36,11 +36,11 @@ const InsightBox: React.FC<InsightBoxProps> = ({
 
       {/* Text */}
       <div>
-        <p className="text-xs text-neutral-600 uppercase">
+        <p className="text-xs text-neutral-950 uppercase">
           {label}
         </p>
 
-        <p className="text-xl font-semibold text-neutral-800" suppressHydrationWarning>
+        <p className="text-xl font-semibold text-neutral-700" suppressHydrationWarning>
           {value.toLocaleString('en-US')}
         </p>
       </div>
